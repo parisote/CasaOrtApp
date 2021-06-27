@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MReHP2zpw/Fujq2v1QX0ksuQDfh6iYWrna+hwePUaUL36WLkSEB7PKot2GEt+E+oeJa80tLYH/w9N6NEcoBdJw==",
+  "dgSpecHash": "u4KXRMchC7hxpuZ3Ow3fYGrGIPq2L7L6GA275CLrSsRldHP5pSqsvjG5WAoH1lAQLKTIiAuetSu5Te44itIwhQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tomi\\Desktop\\Escritorio\\FACULTAD\\1er_2do_año\\NUEVAS_TECNO\\TodoApp\\CasaOrtApp.csproj",
+  "projectFilePath": "C:\\Users\\Tomi\\Desktop\\Escritorio\\FACULTAD\\1er_2do_año\\NUEVAS_TECNO\\CasaOrtApp\\CasaOrtApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tomi\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Tomi\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

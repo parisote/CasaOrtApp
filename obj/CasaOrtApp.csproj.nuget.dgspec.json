@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tomi\\Desktop\\Escritorio\\FACULTAD\\1er_2do_año\\NUEVAS_TECNO\\TodoApp\\CasaOrtApp.csproj": {}
+    "C:\\Users\\Tomi\\Desktop\\Escritorio\\FACULTAD\\1er_2do_año\\NUEVAS_TECNO\\CasaOrtApp\\CasaOrtApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tomi\\Desktop\\Escritorio\\FACULTAD\\1er_2do_año\\NUEVAS_TECNO\\TodoApp\\CasaOrtApp.csproj": {
+    "C:\\Users\\Tomi\\Desktop\\Escritorio\\FACULTAD\\1er_2do_año\\NUEVAS_TECNO\\CasaOrtApp\\CasaOrtApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tomi\\Desktop\\Escritorio\\FACULTAD\\1er_2do_año\\NUEVAS_TECNO\\TodoApp\\CasaOrtApp.csproj",
+        "projectUniqueName": "C:\\Users\\Tomi\\Desktop\\Escritorio\\FACULTAD\\1er_2do_año\\NUEVAS_TECNO\\CasaOrtApp\\CasaOrtApp.csproj",
         "projectName": "CasaOrtApp",
-        "projectPath": "C:\\Users\\Tomi\\Desktop\\Escritorio\\FACULTAD\\1er_2do_año\\NUEVAS_TECNO\\TodoApp\\CasaOrtApp.csproj",
+        "projectPath": "C:\\Users\\Tomi\\Desktop\\Escritorio\\FACULTAD\\1er_2do_año\\NUEVAS_TECNO\\CasaOrtApp\\CasaOrtApp.csproj",
         "packagesPath": "C:\\Users\\Tomi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tomi\\Desktop\\Escritorio\\FACULTAD\\1er_2do_año\\NUEVAS_TECNO\\TodoApp\\obj\\",
+        "outputPath": "C:\\Users\\Tomi\\Desktop\\Escritorio\\FACULTAD\\1er_2do_año\\NUEVAS_TECNO\\CasaOrtApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
