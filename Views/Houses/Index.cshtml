@@ -1,4 +1,4 @@
-﻿@model IEnumerable<CasaOrtApp.Models.House>
+﻿@model CasaOrtApp.Models.TipoViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -13,8 +13,18 @@
 
     </div>
     <br />
+    <div class="form-group">
+        <form asp-controller="Houses" asp-action="Index" method="get">
+            <p>
+                <select asp-for="TipoOperacion" asp-items="Model.Tipo" class="form-control" onchange="this.form.submit()">
+                    <option selected="selected" value="">Seleccionar</option>
+                </select>
+            </p>
+        </form>
+    </div>
+    <br />
     <div class="row">
-        @foreach (var item in Model)
+        @foreach (var item in Model.Houses)
         {
             <div class="col-12 col-sm-4">
                 <div class="card" style="width: 18rem;">

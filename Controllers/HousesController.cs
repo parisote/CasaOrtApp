@@ -20,9 +20,30 @@ namespace CasaOrtApp.Controllers
         }
 
         // GET: Houses
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(Tipo TipoOperacion)
         {
-            return View(await _context.House.ToListAsync());
+            IQueryable<Tipo> tipoQuery = from m in _context.House
+                                            orderby m.tipoDeOperacion
+                                            select m.tipoDeOperacion;
+
+            var houses = from m in _context.House
+                         select m;
+
+             if (Tipo.Alquiler.Equals(TipoOperacion))
+            {
+                houses = houses.Where(x => x.tipoDeOperacion.Equals(TipoOperacion));
+            } else
+            {
+                houses = houses.Where(x => x.tipoDeOperacion.Equals(TipoOperacion));
+            }
+
+            var tipoVM = new TipoViewModel
+            {
+                Tipo = new SelectList(await tipoQuery.Distinct().ToListAsync()),
+                Houses = await houses.ToListAsync()
+            };
+
+            return View(tipoVM);
         }
 
         // GET: Houses/Details/5
@@ -54,7 +75,7 @@ namespace CasaOrtApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Street,Number,Size,Garden,SwimmingPool,Price,Path,ReleaseDate")] House house)
+        public async Task<IActionResult> Create([Bind("Id,Street,Number,Size,Garden,SwimmingPool,Path,Price,ReleaseDate,tipoDeOperacion")] House house)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +107,7 @@ namespace CasaOrtApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Street,Number,Size,Garden,SwimmingPool,Price,Path,ReleaseDate")] House house)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Street,Number,Size,Garden,SwimmingPool,Path,Price,ReleaseDate,tipoDeOperacion")] House house)
         {
             if (id != house.Id)
             {

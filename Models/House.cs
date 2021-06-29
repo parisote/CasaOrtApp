@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using CasaOrtApp.Models;
 
 namespace CasaOrtApp.Models
 {
@@ -22,6 +23,7 @@ namespace CasaOrtApp.Models
         [RegularExpression(@"\d*$", ErrorMessage = "Solo acepta caracteres numericos.")]
         [Required(ErrorMessage = "Campo requerido.")]
         public int Size{ get; set; }
+
         public bool Garden { get; set; }
         public bool SwimmingPool { get; set; }
 
@@ -33,6 +35,9 @@ namespace CasaOrtApp.Models
         public decimal Price { get; set; }
 
         [Required(ErrorMessage = "Campo requerido.")]
-        public DateTime ReleaseDate { get; set; }        
+        public DateTime ReleaseDate { get; set; }
+
+        [EnumDataType(typeof(Tipo))]
+        public Tipo tipoDeOperacion { get; set; }        
     }
 }
