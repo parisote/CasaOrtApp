@@ -1,32 +1,50 @@
 ﻿@using CasaOrtApp.Models
-@model IEnumerable<CasaOrtApp.Models.Emprendimiento>
+@{
+    ViewData["Title"] = "Index";
+    var emprendimientos = ViewData["E_Likes"];
+    var houses = ViewData["H_Likes"];
+}
 
 <div class="container">
     <div class="row">
 
         <div class="col-12" style="text-align:center;">
-            <h1>@ViewData["title"]</h1>
+            <h1>Mis preferidos</h1>
         </div>
 
     </div>
     <div class="row">
-        @foreach (var item in Model)
+        @foreach (var hou in (IEnumerable<House>)houses)
         {
             <div class="col-12 col-sm-4">
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="@Html.DisplayFor(modelItem => item.Path)" alt="@Html.DisplayFor(modelItem => item.Id)" />
+                    <img class="card-img-top" src="@Html.DisplayFor(modelItem => hou.Path)" alt="@Html.DisplayFor(modelItem => hou.Id)" />
                     <div class="card-body">
-                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Street) @Html.DisplayFor(modelItem => item.Number)</h5>
-                        <p class="card-text">Mts @Html.DisplayFor(modelItem => item.Size)</p>
-                        <p class="card-text">U$s @Html.DisplayFor(modelItem => item.Price)</p>
-                        <p class="card-text">@Html.DisplayFor(modelItem => item.ReleaseDate)</p>
-                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => hou.Street) @Html.DisplayFor(modelItem => hou.Number)</h5>
+                        <p class="card-text">Mts @Html.DisplayFor(modelItem => hou.Size)</p>
+                        <p class="card-text">U$s @Html.DisplayFor(modelItem => hou.Price)</p>
+                        <p class="card-text">@Html.DisplayFor(modelItem => hou.ReleaseDate)</p>
+                        <a asp-action="Details" asp-route-id="@hou.Id" class="btn btn-primary">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
                                 <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
                                 <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
                             </svg>
                         </a>
-                        <a onclick="like(@item.Id, '@item.Street', @item.Number, @item.Size, '@item.Path', '@item.Price', '@item.ReleaseDate.ToString("dd/MM/yyyy")');" id='likeButton' class="btn btn-primary">
+                    </div>
+                </div>
+            </div>
+        }
+        @foreach (var emp in (IEnumerable<Emprendimiento>)emprendimientos)
+        {
+            <div class="col-12 col-sm-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="@Html.DisplayFor(modelItem => emp.Path)" alt="@Html.DisplayFor(modelItem => emp.Id)" />
+                    <div class="card-body">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => emp.Street) @Html.DisplayFor(modelItem => emp.Number)</h5>
+                        <p class="card-text">Mts @Html.DisplayFor(modelItem => emp.Size)</p>
+                        <p class="card-text">U$s @Html.DisplayFor(modelItem => emp.Price)</p>
+                        <p class="card-text">@Html.DisplayFor(modelItem => emp.ReleaseDate)</p>
+                        <a asp-action="Details" asp-route-id="@emp.Id" class="btn btn-primary">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
                                 <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
                                 <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
@@ -38,9 +56,3 @@
         }
     </div>
 </div>
-<script type="text/jscript">
-    function like(_id, _street, _number, _size, _path, _price, _date) {
-        var url = "/Emprendimiento/AddLike";
-        $.get(url, { id: _id, street: _street, number: _number, size: _size, path: _path, price: _price, date: _date });
-    }
-</script>

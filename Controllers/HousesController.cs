@@ -7,12 +7,14 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CasaOrtApp.Data;
 using CasaOrtApp.Models;
+using Newtonsoft.Json;
 
 namespace CasaOrtApp.Controllers
 {
     public class HousesController : Controller
     {
         private readonly CasaOrtAppContext _context;
+        private static List<House> array_like = new List<House>();
 
         public HousesController(CasaOrtAppContext context)
         {
@@ -169,6 +171,30 @@ namespace CasaOrtApp.Controllers
         private bool HouseExists(int id)
         {
             return _context.House.Any(e => e.Id == id);
+        }
+
+        public void AddLike(int id, string street, int number, int size, string path, string price, string date)
+        {
+            House h = new House();
+            h.Id = id;
+            h.Street = street;
+            h.Number = number;
+            h.Size = size;
+            h.Path = path;
+            h.Price = Convert.ToDecimal(price);
+            h.ReleaseDate = Convert.ToDateTime(date);
+
+            array_like.Add(h);
+
+            try
+            {
+                TempData["H_Likes"] = JsonConvert.SerializeObject(array_like);
+                TempData.Keep();
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

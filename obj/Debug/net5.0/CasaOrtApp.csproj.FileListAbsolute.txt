@@ -285,7 +285,6 @@ C:\Users\Tomi\Desktop\Escritorio\FACULTAD\1er_2do_año\NUEVAS_TECNO\CasaOrtApp\o
 C:\Users\Tomi\Desktop\Escritorio\FACULTAD\1er_2do_año\NUEVAS_TECNO\CasaOrtApp\obj\Debug\net5.0\Razor\Views\Emprendimiento\Details.cshtml.g.cs
 C:\Users\Tomi\Desktop\Escritorio\FACULTAD\1er_2do_año\NUEVAS_TECNO\CasaOrtApp\obj\Debug\net5.0\Razor\Views\Emprendimiento\Edit.cshtml.g.cs
 C:\Users\Tomi\Desktop\Escritorio\FACULTAD\1er_2do_año\NUEVAS_TECNO\CasaOrtApp\obj\Debug\net5.0\Razor\Views\Emprendimiento\Index.cshtml.g.cs
-C:\Users\Tomi\Desktop\Escritorio\FACULTAD\1er_2do_año\NUEVAS_TECNO\CasaOrtApp\obj\Debug\net5.0\Razor\Views\Emprendimiento\Likes.cshtml.g.cs
 C:\Users\Tomi\Desktop\Escritorio\FACULTAD\1er_2do_año\NUEVAS_TECNO\CasaOrtApp\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Tomi\Desktop\Escritorio\FACULTAD\1er_2do_año\NUEVAS_TECNO\CasaOrtApp\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Tomi\Desktop\Escritorio\FACULTAD\1er_2do_año\NUEVAS_TECNO\CasaOrtApp\obj\Debug\net5.0\Razor\Views\Houses\Create.cshtml.g.cs
@@ -306,3 +305,4 @@ C:\Users\Tomi\Desktop\Escritorio\FACULTAD\1er_2do_año\NUEVAS_TECNO\CasaOrtApp\o
 C:\Users\Tomi\Desktop\Escritorio\FACULTAD\1er_2do_año\NUEVAS_TECNO\CasaOrtApp\obj\Debug\net5.0\ref\CasaOrtApp.dll
 C:\Users\Tomi\Desktop\Escritorio\FACULTAD\1er_2do_año\NUEVAS_TECNO\CasaOrtApp\obj\Debug\net5.0\CasaOrtApp.pdb
 C:\Users\Tomi\Desktop\Escritorio\FACULTAD\1er_2do_año\NUEVAS_TECNO\CasaOrtApp\obj\Debug\net5.0\CasaOrtApp.genruntimeconfig.cache
+C:\Users\Tomi\Desktop\Escritorio\FACULTAD\1er_2do_año\NUEVAS_TECNO\CasaOrtApp\obj\Debug\net5.0\Razor\Views\Likes\Index.cshtml.g.cs

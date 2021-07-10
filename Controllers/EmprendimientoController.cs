@@ -153,26 +153,25 @@ namespace CasaOrtApp.Controllers
             return _context.Emprendimiento.Any(e => e.Id == id);
         }
 
-        public void AddLike(int id, string street, int number)
+        public void AddLike(int id, string street, int number, int size, string path, decimal price, string date)
         {
             Emprendimiento e = new Emprendimiento();
             e.Id = id;
             e.Street = street;
             e.Number = number;
+            e.Size = size;
+            e.Path = path;
+            e.Price = price;
+            e.ReleaseDate = Convert.ToDateTime(date);
+
             array_like.Add(e);
             try { 
-                TempData["Likes"] = JsonConvert.SerializeObject(array_like);
+                TempData["E_Likes"] = JsonConvert.SerializeObject(array_like);
                 TempData.Keep();
             } catch (InvalidOperationException ex)
             {
                 Console.WriteLine(ex.Message);
             }
-        }
-
-        public ActionResult Likes()
-        {
-            ViewData["Likes"] = JsonConvert.DeserializeObject<List<Emprendimiento>>((string)TempData["Likes"]);
-            return View();
         }
     }
 }
