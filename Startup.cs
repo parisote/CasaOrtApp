@@ -26,6 +26,13 @@ namespace CasaOrtApp
         {
             services.AddControllersWithViews();
 
+            services.AddControllersWithViews()
+        .AddSessionStateTempDataProvider();
+            services.AddRazorPages()
+                .AddSessionStateTempDataProvider();
+
+            services.AddSession();
+
             services.AddDbContext<CasaOrtAppContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("TodoAppContext")));
         }
@@ -46,6 +53,8 @@ namespace CasaOrtApp
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

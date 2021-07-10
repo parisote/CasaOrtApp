@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "u4KXRMchC7hxpuZ3Ow3fYGrGIPq2L7L6GA275CLrSsRldHP5pSqsvjG5WAoH1lAQLKTIiAuetSu5Te44itIwhQ==",
+  "dgSpecHash": "OjR2NxHqVWR6cBsSj7n8d1SBmxte6vuNzBJNjIcAQnfIOT4qTdC6GPLO5cel/iAl8+Ag31xShQTU66wqSsPvcQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Tomi\\Desktop\\Escritorio\\FACULTAD\\1er_2do_año\\NUEVAS_TECNO\\CasaOrtApp\\CasaOrtApp.csproj",
   "expectedPackageFiles": [
@@ -53,7 +53,7 @@
     "C:\\Users\\Tomi\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\5.0.2\\microsoft.visualstudio.web.codegenerators.mvc.5.0.2.nupkg.sha512",
     "C:\\Users\\Tomi\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Tomi\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Users\\Tomi\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\Tomi\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Tomi\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\Tomi\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Tomi\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",

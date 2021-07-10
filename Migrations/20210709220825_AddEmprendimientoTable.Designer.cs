@@ -4,14 +4,16 @@ using CasaOrtApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CasaOrtApp.Migrations
 {
     [DbContext(typeof(CasaOrtAppContext))]
-    partial class CasaOrtAppContextModelSnapshot : ModelSnapshot
+    [Migration("20210709220825_AddEmprendimientoTable")]
+    partial class AddEmprendimientoTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

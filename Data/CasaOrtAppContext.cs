@@ -15,5 +15,7 @@ namespace CasaOrtApp.Data
         }
 
         public DbSet<CasaOrtApp.Models.House> House { get; set; }
+
+        public DbSet<CasaOrtApp.Models.Emprendimiento> Emprendimiento { get; set; }
     }
 }
