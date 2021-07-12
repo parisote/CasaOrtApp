@@ -170,7 +170,6 @@ namespace CasaOrtApp.Controllers
             else
                 array_like.Remove(emp);
 
-            array_like.Add(e);
             try { 
                 TempData["E_Likes"] = JsonConvert.SerializeObject(array_like);
                 TempData.Keep();
