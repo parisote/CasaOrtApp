@@ -164,6 +164,12 @@ namespace CasaOrtApp.Controllers
             e.Price = price;
             e.ReleaseDate = Convert.ToDateTime(date);
 
+            Emprendimiento emp = containEmprendimiento(e);
+            if (emp == null)
+                array_like.Add(e);
+            else
+                array_like.Remove(emp);
+
             array_like.Add(e);
             try { 
                 TempData["E_Likes"] = JsonConvert.SerializeObject(array_like);
@@ -172,6 +178,33 @@ namespace CasaOrtApp.Controllers
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        private Emprendimiento containEmprendimiento(Emprendimiento e)
+        {
+            Emprendimiento result = null;
+
+            foreach (Emprendimiento emp in array_like)
+            {
+                if (emp.Id == e.Id)
+                {
+                    result = emp;
+                    break;
+                }
+            }
+            return result;
+        }
+
+        public bool Dislike(int id)
+        {
+            Emprendimiento e = new Emprendimiento();
+            e.Id = id;
+
+            Emprendimiento emp = containEmprendimiento(e);
+            if (emp != null)
+                array_like.Remove(emp);
+
+            return emp != null;
         }
     }
 }

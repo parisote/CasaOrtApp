@@ -26,10 +26,9 @@ namespace CasaOrtApp
         {
             services.AddControllersWithViews();
 
-            services.AddControllersWithViews()
-        .AddSessionStateTempDataProvider();
-            services.AddRazorPages()
-                .AddSessionStateTempDataProvider();
+            services.AddControllersWithViews().AddSessionStateTempDataProvider();
+
+            services.AddRazorPages().AddSessionStateTempDataProvider();
 
             services.AddSession();
 

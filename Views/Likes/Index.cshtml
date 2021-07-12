@@ -1,8 +1,8 @@
 ﻿@using CasaOrtApp.Models
 @{
     ViewData["Title"] = "Index";
-    var emprendimientos = ViewData["E_Likes"];
     var houses = ViewData["H_Likes"];
+    var emprendimientos = ViewData["E_Likes"];
 }
 
 <div class="container">
@@ -30,6 +30,11 @@
                                 <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
                             </svg>
                         </a>
+                        <a onclick="dislike(@hou.Id,true);" id='likeButton' class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" style="color: white" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -50,9 +55,23 @@
                                 <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
                             </svg>
                         </a>
+                        <a onclick="dislike(@emp.Id,false);" id='likeButton' class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" style="color: white" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
         }
     </div>
 </div>
+<script type="text/jscript">
+    function dislike(_id, _is_house) {
+
+        var url = "/Likes/Dislike";
+        $.get(url, { id: _id, house: _is_house });
+
+        location.reload(true);
+    }
+</script>

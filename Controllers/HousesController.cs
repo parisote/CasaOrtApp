@@ -184,7 +184,11 @@ namespace CasaOrtApp.Controllers
             h.Price = Convert.ToDecimal(price);
             h.ReleaseDate = Convert.ToDateTime(date);
 
-            array_like.Add(h);
+            House house = containHouse(h);
+            if (house == null)
+                array_like.Add(h);
+            else
+                array_like.Remove(house);
 
             try
             {
@@ -195,6 +199,41 @@ namespace CasaOrtApp.Controllers
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        private House containHouse(House h)
+        {
+            House result = null;
+
+            foreach(House house in array_like)
+            {
+                if(house.Id == h.Id) { 
+                    result = house;
+                    break;
+                }
+            }
+            return result;
+        }
+
+        public bool GetState(int id) {
+            House h = new House();
+            h.Id = id;
+
+            House house = containHouse(h);
+
+            return house != null;
+        }
+
+        public bool Dislike(int id)
+        {
+            House h = new House();
+            h.Id = id;
+
+            House house = containHouse(h);
+            if (house != null)
+                array_like.Remove(house);
+
+            return house != null;
         }
     }
 }
