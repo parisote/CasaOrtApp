@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
 using CasaOrtApp.Models;
@@ -34,6 +35,22 @@ namespace CasaOrtApp.Controllers
                 ViewData["E_Likes"] = new List<Emprendimiento>();
 
             return View();
+        }
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var house = await _context.House
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (house == null)
+            {
+                return NotFound();
+            }
+
+            return View(house);
         }
 
         public void Dislike(int id, bool house)

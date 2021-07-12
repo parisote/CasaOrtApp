@@ -463,3 +463,4 @@ C:\Users\user\Desktop\TP NT MVC\CasaOrtApp\obj\Debug\net5.0\CasaOrtApp.dll
 C:\Users\user\Desktop\TP NT MVC\CasaOrtApp\obj\Debug\net5.0\ref\CasaOrtApp.dll
 C:\Users\user\Desktop\TP NT MVC\CasaOrtApp\obj\Debug\net5.0\CasaOrtApp.pdb
 C:\Users\user\Desktop\TP NT MVC\CasaOrtApp\obj\Debug\net5.0\CasaOrtApp.genruntimeconfig.cache
+C:\Users\user\Desktop\TP NT MVC\CasaOrtApp\obj\Debug\net5.0\Razor\Views\Likes\Details.cshtml.g.cs

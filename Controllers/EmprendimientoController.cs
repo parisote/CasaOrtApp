@@ -194,7 +194,15 @@ namespace CasaOrtApp.Controllers
             }
             return result;
         }
+        public bool GetState(int id)
+        {
+            Emprendimiento emp = new Emprendimiento();
+            emp.Id = id;
 
+            Emprendimiento emprendimiento = containEmprendimiento(emp);
+
+            return emprendimiento != null;
+        }
         public bool Dislike(int id)
         {
             Emprendimiento e = new Emprendimiento();

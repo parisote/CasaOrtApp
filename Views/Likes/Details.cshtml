@@ -1,0 +1,65 @@
+﻿@model CasaOrtApp.Models.House
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalle</h1>
+
+<div>
+    <h4>Casa</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Calle
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Street)
+        </dd>
+        <dt class="col-sm-2">
+            Número
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Number)
+        </dd>
+        <dt class="col-sm-2">
+            Tamaño(mts)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Size)
+        </dd>
+        <dt class="col-sm-2">
+            Jardín
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Garden)
+        </dd>
+        <dt class="col-sm-2">
+            Pileta
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SwimmingPool)
+        </dd>
+        <dt class="col-sm-2">
+            Precio(U$s)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class="col-sm-2">
+            Tipo de operación
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.tipoDeOperacion)
+        </dd>
+        <dt class="col-sm-2">
+            Fecha de publicación
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReleaseDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Volver</a>
+</div>
